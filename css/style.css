@@ -15,10 +15,10 @@ body {font-family:Arial, Helvetica, sans-serif;font-size:100%;color:#262626;min-
 .bg-bot {width:100%; background:url(../images/bg-bot-tail.gif) center top repeat-x #fff; padding:30px 0 55px}
 	#page3 .bg-bot, #page4 .bg-bot {padding:30px 0 49px}
 .main {width:980px;padding:0;margin:0 auto;font-size:0.8125em;line-height:1.6153em}
-a {color:#ff9601; outline:none}
+a {color:#0e2beb; outline:none}
 a:hover {text-decoration:none}
 .col-1, .col-2 {float:left}
-.wrapper {width:100%; overflow:hidden; position:relative}
+.wrapper {width:150%; overflow:hidden; position:relative}
 .extra-wrap {overflow:hidden}
 p {margin-bottom:18px}
 .p0 {margin-bottom:0px}
@@ -37,7 +37,7 @@ p {margin-bottom:18px}
 .color-1 {color:#fff}
 .color-2 {color:#000}
 .color-3 {color:#262626}
-.color-4 {color:#ff9601}
+.color-4 {color:#0018b3}
 .frame {padding:10px;background:#fff;box-shadow: 3px 5px 8px rgba(0,0,0,0.70);-moz-box-shadow: 3px 5px 8px rgba(0,0,0,0.70);-webkit-box-shadow: 3px 5px 8px rgba(0,0,0,0.70)}
 .frame2 {padding:9px;background:#fff;border:1px solid #e5e5e5}
 /*********************************boxes**********************************/
@@ -47,7 +47,7 @@ p {margin-bottom:18px}
 .indent-top2 {padding-top:4px}
 .indent-right {padding-right:30px}
 .indent-right2 {padding-right:10px}
-.indent-left {padding-left:30px}
+.indent-left {padding-left:40px; position:relative}
 .indent {padding:0 10px 0 30px}
 .indent2 {padding-left:50px}
 .indent3 {padding:0 15px}
@@ -69,15 +69,15 @@ p {margin-bottom:18px}
 header {width:100%;position:relative;z-index:2}
 .row-1 {width:100%;height:71px;background:url(../images/row1-top-tail.gif) left top repeat-x}
 .row-2 {width:100%;min-height:101px;background:url(../images/row2-tail.gif) left top repeat-x #fff}
-h1 {padding:15px 0 0 0;position:relative;font-weight:normal;text-transform:uppercase;margin-left:-4px;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif}
-	h1 span {display:inline-block;	font-size:28px;	line-height:1.2em;	color:#949494;	letter-spacing:-1px;	padding:29px 0 0 4px}
+h1 {padding:15px 0 0 0;position:relative;font-weight:normal;text-transform:uppercase;margin-left:-4px;font-family:Georgia, 'Times New Roman', Times, serif}
+	h1 span {display:inline-block;	font-size:22px;	line-height:1.75em;	color:#ac063d;	letter-spacing:-1px;	padding:29px 0 0 4px}
 .logo {display:inline-block;font-size:60px;line-height:1.2em;;color:#262626;cursor:pointer;letter-spacing:-3px}
 	.logo strong {color:#5f73e8; font-weight:normal}
 /***** menu *****/
 .menu {padding:0;width:100%}
 .menu li {float:left;position:relative}
 	.menu li:first-child {background:url(../images/menu-a-tail.gif) 0 -71px no-repeat}
-.menu li a {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;display:block;width:188px;font-size:21px;line-height:1.238em;padding:21px 0 24px 0;color:#262626;text-align:center;text-transform:uppercase;background:url(../images/menu-a-tail.gif) right -71px no-repeat;letter-spacing:-1px}
+.menu li a {font-family:Georgia, 'Times New Roman', Times, serif;display:block;width:188px;font-size:21px;line-height:1.238em;padding:21px 0 24px 0;color:#1511fd;text-align:center;text-transform:uppercase;background:url(../images/menu-a-tail.gif) right -71px no-repeat;letter-spacing:-1px}
 .menu li a:hover,
 .menu li a.active {color:#fff;background-position:left top;background-repeat:repeat-x;background-color:#000}
 /***** search form *****/
@@ -141,27 +141,27 @@ h1 {padding:15px 0 0 0;position:relative;font-weight:normal;text-transform:upper
 .quote {padding-left:30px;background:url(../images/quote.png) 0 3px no-repeat;position:relative}
 .spacer-1 {width:100%;background:url(../images/pic-1.gif) 217px 0 repeat-y}
 h3 {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;font-size:36px;line-height:1.2em;margin:0 0 22px 0;color:#262626;font-weight:normal;letter-spacing:-2px}
-h6 {color:#ff9601}
-.title {display:inline-block;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;font-size:49px;line-height:71px;text-transform:uppercase;letter-spacing:-3px;color:#ff9601;padding:0 25px 0 0;background:url(../images/pic-2.gif) right 0 repeat-y}
+h6 {color:#1224e9}
+.title {display:inline-block;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;font-size:49px;line-height:71px;text-transform:uppercase;letter-spacing:-3px;color:#0e2beb;padding:0 25px 0 0;background:url(../images/pic-2.gif) right 0 repeat-y}
 	.title.t2 {font-size:60px;	line-height:1.3em;	padding:0 40px 0 0;	background:url(../images/pic-3.gif) right 0 no-repeat}
 .tdate-1 {display:block;font-weight:bold}
 .border-bot {width:100%;padding-bottom:20px;background:url(../images/pic-1.gif) 0 bottom repeat-x}
 .box {width:100%;background:#fff;box-shadow: 0px 5px 8px rgba(0,0,0,0.70);-moz-box-shadow: 0px 5px 8px rgba(0,0,0,0.70);-webkit-box-shadow: 0px 5px 8px rgba(0,0,0,0.70)}
 .button {display:inline-block;padding:10px 20px 11px;color:#fff;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;font-size:18px;line-height:1.22em;background:url(../images/button-tail.gif) 0 0 repeat-x #000;text-transform:uppercase;letter-spacing:-1px}	
-.button:hover {background:#ff9601}
+.button:hover {background:#0e2beb}
 .list-1 li {display:inline-block;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;font-size:21px;line-height:26px;padding:0 0 10px 12px;background:url(../images/marker.png) 0 12px no-repeat;letter-spacing:-1px}
 .list-1 li.last {padding:0 0 0 12px}
 	.list-1 li a:hover {color:#fff}
 .list-2 li {line-height:1.23em;padding:8px 0;background:url(../images/pic-1.gif) 0 bottom repeat-x}
 	.list-2 li a {display:inline-block;	color:#262626;	padding-left:10px;	background:url(../images/marker-2.gif) 0 6px no-repeat}
-		.list-2 li a:hover {color:#ff9601}
+		.list-2 li a:hover {color:#0e2beb}
 	.list-2 .last-item {background:none}
 .price-list li {width: 100%;overflow: hidden;vertical-align: top;line-height: 1.23em;padding:7px 0 9px;color: #262626;background:url(../images/pic-1.gif) 0 bottom repeat-x}
 .price-list li.last {background:none}
 	.price-list li strong {background: url(../images/pic-4.gif) 0% 12px repeat-x;	display: block;	overflow: hidden}
 	.price-list li span {float: right;	color: #262626}
 	.price-list li a {float: left;	text-decoration: none;	color: #262626;	padding-left:10px;	background:url(../images/marker-2.gif) 0 5px no-repeat}
-		.price-list li a:hover {color:#ff9601}
+		.price-list li a:hover {color:#0e2beb}
 .link:hover {text-decoration:underline} 
 .link-1 {display:inline-block;font-size:14px;padding-right:8px;background:url(../images/marker-3.gif) right 8px no-repeat}
 .link-1:hover {color:#fff} 
