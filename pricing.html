@@ -51,7 +51,7 @@
                     	<form id="search-form" method="post" enctype="multipart/form-data">
                             <fieldset>	
                                 <div class="search-field">
-                                    <input name="search" type="text" />
+                                    <input name="search" type="text" placeholder="Please don't use me...."/>
                                     <a class="search-button" href="#" onClick="document.getElementById('search-form').submit()"><span>search</span></a>	
                                 </div>						
                             </fieldset>
@@ -77,31 +77,42 @@
                                             <div class="grid_12">
                                             	<div class="indent-left p2">
                                                 	<h3 class="p0">Rent With Us Today Plz</h3>
-                                                    <h4 class="p0">NEW LISTINGS</h4>
+                                                    <h4 class=" p2">NEW LISTINGS</h4>
                                                 </div>
                                                 <div class="wrapper p4">
-                                                    <article class="grid_4 alpha">
+                                                    <article class="grid_5 alpha">
                                                         <div class="indent-left">
-                                                            <figure class="frame2 p2"><img src="images/page4-img1.jpg" alt="" width="300" /></figure>
-                                                            <p class="color-4 prev-indent-bot">A shed in resident area. Converted Ensuite</p>
+                                                            <figure class="shed p2"><img src="images/page4-img1.jpg" alt="" width="300" height="400"/></figure>
+                                                            <p class="color-4 prev-indent-bot">A shed in resident area. Converted Ensuite.</p>
                                                             <p>Comes with its own lock</p>
                                                             <div class="wrapper">
-                                                            	<span class="price fleft">39999.99 pcm</span>
-                                                                <a class="button fright" href="#">Read More</a>
+                                                            	<span class="price fleft">3999.98 pcm</span>
+                                                                <a class="button fright" href="#" onClick="openModal()"><span>Read More</span></a>
                                                             </div>
                                                         </div>
                                                     </article>
-                                                    <!-- <article class="grid_4">
-                                                        <div class="indent3">
-                                                            <figure class="frame2 p2"><img src="images/page4-img2.jpg" alt="" /></figure>
-                                                            <p class="color-4 prev-indent-bot">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit.</p>
-                                                            <p>Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt eque porro quisquam est, qui dolorem ipsum.</p>
+                                                    <article class="grid_5">
+                                                        <div class="indent">
+                                                            <figure class="boat p2"><img src="images/page4-img2.jpg" alt="" width="400" height="400"/></figure>
+                                                            <p class="color-4 prev-indent-bot">Reconstructed House on the go.</p>
+                                                            <p>Docking fee not included.</p>
                                                             <div class="wrapper">
-                                                            	<span class="price fleft">$54.99</span>
-                                                                <a class="button fright" href="#">Read More</a>
-                                                            </div>
+                                                            	<span class="price fleft">£800.00 pcm</span>                                                              
+                                                            
+                                                            <button class="button fright" id="openModalBtn">Read More</button>
                                                         </div>
-                                                    </article> -->
+                                                            <div id="myModal" class="modal">
+                                                                <div class="modal-content">
+                                                                    <span id="closeModalBtn" class="close" onclick="closeModal()">&times;</span>
+                                                                    <h2>Buy House Now! Limited Time Only</h2>
+                                                                    <p>This is a modal. Click the "X" button to close it.</p>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <script src="script.js"></script>
+                                                                                        
+                                                        </div>
+                                                    </article>
                                                     <!-- <article class="grid_4 omega">
                                                         <div class="indent-right">
                                                             <figure class="frame2 p2"><img src="images/page4-img3.jpg" alt="" /></figure>
