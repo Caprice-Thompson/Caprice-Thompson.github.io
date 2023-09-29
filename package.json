@@ -1,5 +1,7 @@
 {
   "devDependencies": {
-    "cypress": "^13.2.0"
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress": "^13.2.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
   }
 }
