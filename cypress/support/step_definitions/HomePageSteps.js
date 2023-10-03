@@ -21,19 +21,6 @@ And('I navigate to the Catalogue page', () => {
   getLabel('cataloguePage').should('be.visible').click();
 });
 
-Then('I am presented with the Catering page', () => {
-  getLabel('caterHeader').should('be.visible');
-  getLabel('caterHeader').should('have.text', 'catering');
-});
-
-And('I click the Read More button', () => {
-  cy.get('#openModalBtn').click();
-});
-
-And('I close the modal', () => {
-  cy.get('.close').click();
-});
-
 And('I navigate to the Pricing page', () => {
   getLabel('pricingPage').should('be.visible').click();
 });
