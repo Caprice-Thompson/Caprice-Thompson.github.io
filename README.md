@@ -106,4 +106,7 @@ Right aligned columns
 
 ![Minion](https://octodex.github.com/images/minion.png)
 
+## Commands
+##  npx cypress open
+
 ## The End!

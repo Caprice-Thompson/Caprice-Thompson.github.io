@@ -1,7 +1,7 @@
 Feature: Home page
 
 	Scenario: Test - Verify user can access all links on navbar
-		Given I open the Application
-		And I am presented with the Home Page
-		When I select the Service Navbar option
+		Given I open the application
+		And I am presented with the Landing page
+		When I navigate to the Services page
 		Then I am presented with the Services Page
