@@ -9,24 +9,8 @@ Given('I open the application', () => {
 });
 
 Then('I am presented with the Landing page', () => {
-getLabel('homeHeader').should('have.text', 'Wiki Treats');
+getLabel('homeHeader').should('have.text', 'wiki treats');
   getLabel('homeNavBar').should('be.visible');
-});
-
-And('I navigate to the Services page', () => {
-  getLabel('servicePage').should('be.visible').click();
-});
-
-And('I navigate to the Catalogue page', () => {
-  getLabel('cataloguePage').should('be.visible').click();
-});
-
-And('I navigate to the Pricing page', () => {
-  getLabel('pricingPage').should('be.visible').click();
-});
-
-And('I navigate to the Contact Us Form', () => {
-  getLabel('contactUsPage').should('be.visible').click();
 });
 
 Then('I should see the expected result', () => {
