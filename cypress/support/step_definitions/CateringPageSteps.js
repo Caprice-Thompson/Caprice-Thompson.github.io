@@ -9,14 +9,6 @@ Then('I am presented with the Catering page', () => {
   And('I navigate to the Catering page', () => {
     getLabel('cataloguePage').should('be.visible').click();
   });
- 
-  When('I click the Read More button', () => {
-    cy.get('#openModalBtn').click();
-  });
-  
-  And('I close the modal', () => {
-    cy.get('.close').click();
-  });
 
   Then('I view Catering Profile Modal', dataTable => {
     getLabel('desc-cat-title').should('have.text', dataTable)
