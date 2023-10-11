@@ -2,7 +2,7 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 import { getLabel } from '../commands';
 
 And('I navigate to the Pricing page', () => {
-    getLabel('pricingPage').should('be.visible').click();
+    getLabel('pricingPageTab').should('be.visible').click();
   });
 
 Then('I am presented with the Pricing Page', () => {

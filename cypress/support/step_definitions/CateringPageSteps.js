@@ -7,7 +7,7 @@ Then('I am presented with the Catering page', () => {
   });
 
   And('I navigate to the Catering page', () => {
-    getLabel('cataloguePage').should('be.visible').click();
+    getLabel('cateringPageTab').should('be.visible').click();
   });
 
   Then('I view Catering Profile Modal', dataTable => {
