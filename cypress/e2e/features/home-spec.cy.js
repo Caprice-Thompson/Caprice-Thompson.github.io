@@ -7,7 +7,8 @@ describe('Home page', () => {
   });
   it('displays page title', () => {
     // Your test case code here
-    cy.get('a[aria-label="homeHeader"]').contains('Wiki Treats'); // Replace with an element on your webpage
+    cy.get('[aria-label="homeHeader"]').should('have.text', 'wiki treats');// Replace with an element on your webpage
+    cy.get('[aria-label="homeNavBar"]').should('be.visible');
   });
 
   // it('Test Case 2', () => {

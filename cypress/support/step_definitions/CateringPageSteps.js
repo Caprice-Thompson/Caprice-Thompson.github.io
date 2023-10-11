@@ -3,7 +3,7 @@ import { getLabel } from '../commands';
 
 Then('I am presented with the Catering page', () => {
     getLabel('caterHeader').should('be.visible');
-    getLabel('caterHeader').should('have.text', 'catering');
+    getLabel('caterHeader').should('have.text', 'Catering');
   });
 
   And('I navigate to the Catering page', () => {
@@ -11,5 +11,7 @@ Then('I am presented with the Catering page', () => {
   });
 
   Then('I view Catering Profile Modal', dataTable => {
-    getLabel('desc-cat-title').should('have.text', dataTable)
+    const text = dataTable.rawTable[0][0].split('/');
+    getLabel('desc-cat-title').should('contain.text', text[0]);
+    getLabel('desc-cat-title').should('contain.text', text[1]);
   });
