@@ -1,1 +1,0 @@
-export const getLabel = (attribute) => cy.get(`[aria-label="${attribute}"]`);
