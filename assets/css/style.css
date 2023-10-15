@@ -618,6 +618,10 @@ section {
   transform: translateX(5px);
 }
 
+  .line-spacing {
+    margin-bottom: 90px; /* Adjust the margin as needed for spacing */
+  }
+
 /*--------------------------------------------------------------
 # Values
 --------------------------------------------------------------*/
