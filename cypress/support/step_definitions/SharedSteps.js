@@ -2,9 +2,9 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 import { getLabel } from '../commands';
 
 When('I click the Read More button', () => {
-    cy.get('#openModalBtn').click();
+    cy.get('[data-target="#aboutUsModal"]').click();
   });
   
   And('I close the modal', () => {
-    cy.get('.close').click();
+    getLabel('closeBtn').click();
   });
