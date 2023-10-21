@@ -12,6 +12,7 @@ Then('I am presented with the Landing page', () => {
   getLabel('landingHeader').should('be.visible');
   getLabel('landingHeader').should('have.text', 'WIKI TREATS');
   getLabel('landingDesc').should('contain.text', 'THE CAT ENCYCLOPEDIA');
+  cy.percySnapshot('Home page');
 });
 
 When('I click the Join Us Now Button', () => {
