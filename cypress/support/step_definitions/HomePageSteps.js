@@ -3,9 +3,6 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 import { getLabel } from '../commands';
 
-// const homePageHeader = getLabel('landingHeader');
-// const joinUsNowBtn = getLabel('joinArrowNav');
-
 Given('I open the application', () => {
   cy.visit('Caprice-Thompson.github.io');
   getLabel('landingHeader').should('be.visible');
@@ -18,6 +15,7 @@ Then('I am presented with the Landing page', () => {
 });
 
 When('I click the Join Us Now Button', () => {
+  getLabel('joinArrowNav').click();
   getLabel('joinArrowNav').should('be.visible').click();
 });
 

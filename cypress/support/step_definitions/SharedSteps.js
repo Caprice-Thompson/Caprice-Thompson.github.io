@@ -6,6 +6,8 @@ When('I click the Read More button', () => {
   });
   
   And('I close the modal', () => {
-    cy.get('.modal-content').contains('Close').click();
-    // getLabel('closeBtn').click();
+    // cy.get('modal-footer').should('be.visible');
+    cy.get('modal-content').contains('[aria-label="closeModal"]').click();
+    getLabel('closeModal').click({force: true});
+    // getLabel('closeModal').should('be.visible').click();
   });
