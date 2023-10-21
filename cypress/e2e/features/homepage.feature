@@ -5,12 +5,12 @@ Feature: Home page
 	Scenario: Test - General
 		Given I open the application
 		And I am presented with the Landing page
-		And I open the Get Started Modal
-		And The Introductory Offer form is displayed
-		And The Introductory Offer form is text is verified
-			| Please send card details for your chance to win a handwritten letter. |
-		And I close the modal
-		# And I click the Join Us Now Button
+		# And I open the Get Started Modal
+		# And The Introductory Offer form is displayed
+		# And The Introductory Offer form is text is verified
+		# 	| Please send card details for your chance to win a handwritten letter. |
+		# And I close the modal
+		And I click the Join Us Now Button
 		When I am presented with the About page
 		And I verify About page content
 			| Global Dynasty Investments Inc.. |

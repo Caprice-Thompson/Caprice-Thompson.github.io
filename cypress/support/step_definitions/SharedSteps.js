@@ -6,5 +6,5 @@ When('I click the Read More button', () => {
   });
   
   And('I close the modal', () => {
-    getLabel('closeModal').click({force: true});
+    getLabel('Close').click({force: true});
   });

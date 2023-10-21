@@ -2302,6 +2302,12 @@ section {
   border-radius: 4px;
 }
 
+.clickable-span {
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+}
+
 .footer .footer-newsletter form input[type=submit]:hover {
   background: #5969f3;
 }
