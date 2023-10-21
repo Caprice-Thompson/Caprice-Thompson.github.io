@@ -6,5 +6,7 @@ When('I click the Read More button', () => {
   });
   
   And('I close the modal', () => {
-    getLabel('Close').click({force: true});
+    cy.get('.clickable-span').click({ multiple: true, waitForAnimations: true });
+   // cy.visit('Caprice-Thompson.github.io')
+    getLabel('Close').click({ force: true, waitForAnimations: true });
   });

@@ -2,7 +2,8 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 import { getLabel } from '../commands';
 
 And('I navigate to the Services page', () => {
-    getLabel('pricingPageTab').should('be.visible').click();
+  cy.visit('caprice-thompson.github.io/services.html');
+    // getLabel('pricingPageTab').should('be.visible').click();
   });
 
 Then('I am presented with the Services Page', () => {
