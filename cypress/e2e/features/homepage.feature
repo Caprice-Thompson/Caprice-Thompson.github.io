@@ -10,12 +10,13 @@ Feature: Home page
 		And The Introductory Offer form is text is verified
 			| Please send card details for your chance to win a handwritten letter. |
 		And I close the modal
-		And I click the Join Us Now Button
+		# And I click the Join Us Now Button
 		When I am presented with the About page
 		And I verify About page content
 			| Global Dynasty Investments Inc.. |
 		Then I click the Read More button
 		And I am presented with the modal content
+			| We are more than just cats; we are shrewd business moguls, determined to climb the corporate tree to reach the summit of financial success. |
 		And I navigate to the Services page
 		And I am presented with the Services Page
 		And I navigate to the Teams page

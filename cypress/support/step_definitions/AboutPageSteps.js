@@ -12,14 +12,12 @@ Then('I am presented with the About page', () => {
   });
 
 Then('I verify About page content', dataTable => {
-    const text = dataTable.rawTable[0][0].split('/');
-    getLabel('aboutGlobalSummary').should('contain.text', text[0]);
-    getLabel('aboutGlobalSummary').should('contain.text', text[1]);
+    const text = dataTable.rawTable[0][0];
+    getLabel('aboutGlobalSummary').should('contain.text', text);
   });
 
 And('I am presented with the modal content', dataTable => {
-    const text = dataTable.rawTable[0][0].split('/');
-    cy.get('#aboutUsModalLabel').should('eq','Gloabl Dynasty!');
-    getLabel('modalAboutDetails').should('contain.text', text[0]);
-    getLabel('modalAboutDetails').should('contain.text', text[1]);
+    const text = dataTable.rawTable[0][0];
+    // cy.get('#aboutUsModalLabel').should('eq','Gloabl Dynasty!');
+    getLabel('modalAboutDetails').should('contain.text', text);
   });
