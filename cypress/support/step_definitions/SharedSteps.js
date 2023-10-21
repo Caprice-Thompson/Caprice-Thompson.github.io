@@ -6,5 +6,6 @@ When('I click the Read More button', () => {
   });
   
   And('I close the modal', () => {
-    getLabel('closeBtn').click();
+    cy.get('.modal-content').contains('Close').click();
+    // getLabel('closeBtn').click();
   });

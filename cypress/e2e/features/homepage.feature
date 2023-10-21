@@ -5,7 +5,17 @@ Feature: Home page
 	Scenario: Test - General
 		Given I open the application
 		And I am presented with the Landing page
-		When I navigate to the Design page
+		And I open the Get Started Modal
+		And The Introductory Offer form is displayed
+		And The Introductory Offer form is text is verified
+			| Please send card details for your chance to win a handwritten letter. |
+		And I close the modal
+		And I click the Join Us Now Button
+		When I am presented with the About page
+		And I verify About page content
+			|  |
+
+
 		Then I am presented with the Design Page
 		And I navigate to the Pricing page
 		And I am presented with the Pricing Page

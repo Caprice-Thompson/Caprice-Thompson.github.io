@@ -374,13 +374,13 @@ section {
   color: #fff;
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .mobile-nav-toggle {
     display: block;
   }
 
   .navbar ul {
-    display: none;
+    display: block;
   }
 }
 
@@ -435,7 +435,7 @@ section {
 
 .navbar-mobile .dropdown ul {
   position: static;
-  display: none;
+  display: block;
   margin: 10px 20px;
   padding: 10px 0;
   z-index: 99;
@@ -465,7 +465,7 @@ section {
 
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
-}
+} */
 
 /*--------------------------------------------------------------
 # Hero Section

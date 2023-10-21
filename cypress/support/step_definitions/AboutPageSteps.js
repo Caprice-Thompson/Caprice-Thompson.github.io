@@ -1,8 +1,8 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 import { getLabel } from '../commands';
 
-const aboutContent = getLabel('aboutGlobalSummary');
-const modalContent = getLabel('modalAboutDetails');
+// const aboutContent = getLabel('aboutGlobalSummary');
+// const modalContent = getLabel('modalAboutDetails');
 
 Then('I am presented with the About page', () => {
     getLabel('aboutTitle').should('be.visible');
