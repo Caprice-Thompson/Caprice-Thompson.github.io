@@ -5606,7 +5606,7 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  padding: calc(var(--bs-modal-padding) - var(--bs-modal-footer-gap) * 0.5);
+  padding: calc(var(--bs-modal-padding) - var(--bs-modal-footer-gap) * 0.9);
   background-color: var(--bs-modal-footer-bg);
   border-top: var(--bs-modal-footer-border-width) solid var(--bs-modal-footer-border-color);
   border-bottom-right-radius: var(--bs-modal-inner-border-radius);
@@ -5618,7 +5618,7 @@ textarea.form-control-lg {
 
 @media (min-width: 576px) {
   .modal {
-    --bs-modal-margin: 1.75rem;
+    --bs-modal-margin: 3rem;
     --bs-modal-box-shadow: var(--bs-box-shadow);
   }
   .modal-dialog {
