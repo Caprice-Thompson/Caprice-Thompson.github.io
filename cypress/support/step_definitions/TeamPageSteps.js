@@ -9,4 +9,5 @@ And('I navigate to the Teams page', () => {
     const teamsMsg = dataTable.rawTable[0][0];
     getLabel('teamSubTitle').should('be.visible');
     getLabel('teamSubTitle').should('contain.text', teamsMsg);
+    cy.percySnapshot('Teams Page');
   });

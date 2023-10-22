@@ -8,4 +8,5 @@ And('I navigate to the Contact Us Page', () => {
   Then('I am presented with the Contact Us Page', () => {
     getLabel('contactUsForm').should('be.visible');
     getLabel('contactUsForm').should('contain.text', 'Contact Us');
+    cy.percySnapshot('Contact Us Page');
   });

@@ -1,0 +1,174 @@
+version: 2
+
+# Configuration for your Percy project
+project:
+  # Your Percy project token
+  # You can find this token in your Percy project settings
+  # Replace 'YOUR_PERCY_TOKEN' with your actual Percy token
+  token: web_ce32d87d4fbb59aa73d7418e720ace6cddd034400c507a676f7b10ad6c40719b
+
+  # Set the name for your Percy project (optional)
+  name: Visual regression Test
+
+# Configuration for snapshots
+snapshot:
+  # Include any global widths or breakpoints for your snapshots
+  widths:
+    - 375  # Example: mobile
+    - 768  # Example: tablet
+    - 1440 # Example: desktop
+
+  # You can include additional environment variables here, if needed
+  # environment:
+  #   # Example: API_KEY for an API used in your tests
+  #   API_KEY: your_api_key
+
+# Define which files to ignore during visual tests
+ignore:
+  # Files or directories to ignore
+  - node_modules/
+  - .git/
+  - .DS_Store
+
+# Define which directories should be uploaded to Percy
+upload:
+  # Directories to upload
+  - public/
+  - build/
+
+# Choose your Percy agent and version (if applicable)
+agent:
+  name: percy-cypress
+  version: 4.0.0  # Specify the desired agent version
+
+# Set up additional Percy features (optional)
+# notifications:
+#   slack:
+#     # Configure Slack notifications
+#     webhook_url: https://hooks.slack.com/services/your-webhook-url
+
+# Concurrent test execution configuration
+concurrency:
+  # Maximum number of parallel test runs
+  max: 10
+  # Minimum number of parallel test runs
+  min: 2
+
+# Approvals configuration (optional)
+approvals:
+  # Threshold for visual changes (0-100)
+  threshold: 1
+
+# Configuration for base branch diff (optional)
+baseBranch: main
+
+# name: Run Visual regression test
+# on:
+#   #  schedule:
+#   #    - cron: '30 3 * * 1-4' # Runs nightly at 0330UTC Monday to Thursday.
+#   workflow_dispatch: # Or trigger manually.
+# env:
+#   PLANET_V_ENVIRONMENT: dev
+#   TEST_PLAN: 'WF2-6279' # This must match the jira ticket number with test plans, and must match that in other cypress workflows.
+#   MAX_PARALLELISM: 5 # Used to set test parallelism
+#   PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+#   PERCY_TARGET_COMMIT: ${{ github.sha }}
+#   PERCY_PARALLEL_NONCE: '${{ github.workflow }}-${{ github.run_number }}-${{ github.run_attempt }}' # Unique nonce per run and attempt
+# permissions:
+#   id-token: write
+#   contents: read
+#   packages: read
+
+# defaults:
+#   run:
+#     shell: bash
+# jobs:
+#   prepareTests:
+#     name: Prep Tests & Wait for Env
+#     outputs:
+#       matrix: ${{ steps.groupTests.outputs.matrix }}
+#       actualParallelism: ${{ steps.calculateParallelism.outputs.actualParallelism }}
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v3
+#       - name: Init
+#         id: init
+#         uses: ./.github/actions/init
+#         with:
+#           environment: ${{env.PLANET_V_ENVIRONMENT}}
+#       - name: Group Tests
+#         id: groupTests
+#         uses: ./.github/actions/cypressGroup
+#         with:
+#           branch: ${{ steps.init.outputs.branch }}
+#           github-token: ${{ secrets.GITHUB_TOKEN }}
+#           xRayClientID: ${{ secrets.XRAY_CLIENT_ID }}
+#           xRayClientSecret: ${{ secrets.XRAY_CLIENT_SECRET }}
+#           jira-tests: ${{ env.TEST_PLAN }}
+#           parallelism: ${{ env.MAX_PARALLELISM }}
+#       - name: Calculate Actual Parallelism
+#         id: calculateParallelism
+#         run: | 
+#           PERCY_PARALLEL_TOTAL=$(echo '${{ steps.groupTests.outputs.matrix }}' | jq 'length')
+#           echo "actualParallelism=$PERCY_PARALLEL_TOTAL" >> $GITHUB_OUTPUT
+
+#   percyTests:
+#     runs-on: ubuntu-latest
+#     needs: [prepareTests]
+#     strategy:
+#       fail-fast: false
+#       matrix:
+#         group: ${{ fromJson(needs.prepareTests.outputs.matrix) }}
+#     env: 
+#       PERCY_PARALLEL_TOTAL: ${{ needs.prepareTests.outputs.actualParallelism }}
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v3
+#       - name: Init
+#         id: init
+#         uses: ./.github/actions/init
+#         with:
+#           environment: ${{env.PLANET_V_ENVIRONMENT}}
+#       - name: Run Tests
+#         id: testFeature
+#         uses: ./.github/actions/cypressTestingParallel
+#         with:
+#           baseUrl: ${{ env.SECRET_ENV_URL }}
+#           datadogAPIKey: ${{ secrets.DD_API_KEY }}
+#           github-token: ${{ secrets.GITHUB_TOKEN }}
+#           test-env-tag: ${{ steps.init.outputs.test-env-tag }}
+#           db-cluster-id: ${{ env.dbClusterId }}
+#           group: ${{ matrix.group }}
+#           command-prefix: 'percy exec --parallel -- npx'
+
+#   reportTests:
+#     name: Test Reporting
+#     needs: [percyTests]
+#     if: always()
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v3
+#       - name: Init
+#         id: init
+#         uses: ./.github/actions/init
+#         with:
+#           environment: ${{ env.PLANET_V_ENVIRONMENT }}
+#       - name: Report Results
+#         id: testFeature
+#         uses: ./.github/actions/cypressResults
+#         with:
+#           github-token: ${{ secrets.GITHUB_TOKEN }}
+#           xRayClientID: ${{ secrets.XRAY_CLIENT_ID }}
+#           xRayClientSecret: ${{ secrets.XRAY_CLIENT_SECRET }}
+#           jira-plan: ${{ env.TEST_PLAN }}
+#           sendReport: true
+#       - name: Report Outcome
+#         run: |
+#           if [[ ${{ needs.percyTests.result }} != "success" ]]; then
+#             echo "::error::One or many tests have failed."
+#             exit 1
+#           else
+#             echo "Tests have passed."
+#           fi

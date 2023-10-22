@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "cy:run": "npx cypress run",
+    "cy:open": "npx cypress open",
+    "cy:percy": "percy exec --verbose -- cypress run "
+  },
   "devDependencies": {
     "@cypress/browserify-preprocessor": "^3.0.2",
     "cypress": "^13.3.1",

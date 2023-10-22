@@ -14,10 +14,13 @@ Then('I am presented with the About page', () => {
 Then('I verify About page content', dataTable => {
     const text = dataTable.rawTable[0][0];
     getLabel('aboutGlobalSummary').should('contain.text', text);
+    cy.percySnapshot('About Page');
   });
 
 And('I am presented with the modal content', dataTable => {
     const text = dataTable.rawTable[0][0];
-    // cy.get('#aboutUsModalLabel').should('eq','Gloabl Dynasty!');
+    cy.get('#aboutUsModalLabel').should('have.text','Global Dynasty!');
+    getLabel('modalAboutDetails').should('be.visible');
     getLabel('modalAboutDetails').should('contain.text', text);
+    cy.percySnapshot('About Page Modal');
   });

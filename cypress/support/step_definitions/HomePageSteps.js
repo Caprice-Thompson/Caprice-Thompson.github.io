@@ -2,6 +2,8 @@
 
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 import { getLabel } from '../commands';
+import '@percy/cypress';
+
 
 Given('I open the application', () => {
   cy.visit('Caprice-Thompson.github.io');
@@ -28,6 +30,7 @@ Then('The Introductory Offer form is displayed', () => {
   cy.get('#exampleModalLabel').should('be.visible');
   cy.get('#exampleModalLabel').should('have.text', 'Get Started Today!');
   cy.get('.line-spacing').should('have.text', 'Introductory Offer');
+  cy.percySnapshot('Get Started Modal');
   });
 
 And('The Introductory Offer form is text is verified', (dataTable) => {
