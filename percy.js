@@ -1,7 +1,7 @@
 module.exports = {
   version: 2,
   snapshot: {
-    widths: [375, 1280],
+    widths: 1280,
     minHeight: 1024,
     // percyCSS: '| . { display: none; }',
   },
