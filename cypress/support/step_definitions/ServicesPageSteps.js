@@ -15,3 +15,13 @@ Then('I am viewing Service Offers', () => {
   getLabel('offerLabels').should('have.value','Cat');
   cy.percySnapshot('Services Page');
 });
+
+And('I navigate to the Portfolio page', () => {
+  cy.visit('caprice-thompson.github.io/portfolio-details.html');
+  });
+
+Then('I am presented with the Portfolio Page', () => {
+  getLabel('portDeets').should('be.visible');
+  getLabel('portDeets').should('contain.text','Portfolio Details');
+});
+
