@@ -4,7 +4,7 @@ import { getLabel } from '../commands';
 
 Then('I am presented with the About page', () => {
     getLabel('aboutTitle').should('be.visible');
-    getLabel('aboutTitle').should('have.text', 'About Us');
+    getLabel('aboutTitle').should('have.text', 'About');
   });
 
   And('I navigate to the About page', () => {

@@ -1,15 +1,12 @@
 version: 2
 
-# Configuration for your Percy project
+# Configuration for Percy project
 project:
-  # Your Percy project token
-  # You can find this token in your Percy project settings
-  # Replace 'YOUR_PERCY_TOKEN' with your actual Percy token
   token: web_ce32d87d4fbb59aa73d7418e720ace6cddd034400c507a676f7b10ad6c40719b
-
-  # Set the name for your Percy project (optional)
   name: Visual regression Test
-
+#Set Variables
+env:
+PERCY_TARGET_BRANCH: main 
 # Configuration for snapshots
 snapshot:
   # Include any global widths or breakpoints for your snapshots
@@ -17,11 +14,6 @@ snapshot:
     - 375  # Example: mobile
     # - 768  # Example: tablet
     - 1440 # Example: desktop
-
-  # You can include additional environment variables here, if needed
-  # environment:
-  #   # Example: API_KEY for an API used in your tests
-  #   API_KEY: your_api_key
 
 # Define which files to ignore during visual tests
 ignore:

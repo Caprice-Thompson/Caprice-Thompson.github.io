@@ -2,7 +2,7 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 import { getLabel } from '../commands';
 
 And('I navigate to the Services page', () => {
-  cy.visit('http://127.0.0.1:5500/services.html');
+  cy.visit('caprice-thompson.github.io/services.html');
   });
 
 Then('I am presented with the Services Page', () => {
