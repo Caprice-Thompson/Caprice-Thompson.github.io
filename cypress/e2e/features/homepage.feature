@@ -18,6 +18,7 @@ Feature: Home page
 			| We are more than just cats; we are shrewd business moguls, determined to climb the corporate tree to reach the summit of financial success. |
 		And I navigate to the Services page
 		And I am presented with the Services Page
+		And I am viewing Service Offers
 		And I navigate to the Portfolio page
 		And I am presented with the Portfolio Page
 		And I navigate to the Teams page

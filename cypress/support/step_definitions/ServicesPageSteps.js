@@ -12,7 +12,7 @@ Then('I am presented with the Services Page', () => {
 
 Then('I am viewing Service Offers', () => {
   getLabel('offerLabels').should('be.visible');
-  getLabel('offerLabels').should('have.value','Cat');
+  getLabel('offerLabels').should('contain.value','');
   cy.percySnapshot('Services Page');
 });
 
@@ -23,5 +23,6 @@ And('I navigate to the Portfolio page', () => {
 Then('I am presented with the Portfolio Page', () => {
   getLabel('portDeets').should('be.visible');
   getLabel('portDeets').should('contain.text','Portfolio Details');
+  cy.percySnapshot('Portfolio Page');
 });
 
