@@ -1,18 +1,24 @@
 version: 2
 
 # Configuration for Percy project
-project:
-  token: web_ce32d87d4fbb59aa73d7418e720ace6cddd034400c507a676f7b10ad6c40719b
+# project:
+#   token: web_a9ddaf7869a8b127b572958710929f4abd81dddd1a8aaca9a9ef349b24f06169
   name: Visual regression Test
 #Set Variables
 env:
+# PERCY_TOKEN: 'web_a9ddaf7869a8b127b572958710929f4abd81dddd1a8aaca9a9ef349b24f06169'
 PERCY_TARGET_BRANCH: main 
+# MAX_PARALLELISM: 3
+PERCY_TARGET_COMMIT: 'ac74908e924c421caf61761eeaa33fbbb0b102b0'
+# PERCY_PARALLEL_TOTAL: 2
+# permissions:
+#   id-token: write
 # Configuration for snapshots
 snapshot:
   # Include any global widths or breakpoints for your snapshots
   widths:
     - 375  # Example: mobile
-    # - 768  # Example: tablet
+    - 768  # Example: tablet
     - 1440 # Example: desktop
 
 # Define which files to ignore during visual tests
@@ -52,7 +58,7 @@ approvals:
   threshold: 1
 
 # Configuration for base branch diff (optional)
-baseBranch: main
+# baseBranch: main
 
 
 
